@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches...</title>
+
+    <meta name="description" content="An online shopping website demo built using HTML, CSS and JavaScript.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+                <img src="headerlogo.png" alt="Shopping Website Logo">
+                <span>.in</span>
+            </a>
+
+            <div class="nav-location" id="openLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <small>Delivering to Coimbatore 641014</small>
+                    <strong>Update location</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <form class="nav-search" id="searchForm">
+            <select class="search-select" aria-label="Search category">
+                <option value="All">All</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Books">Books</option>
+                <option value="Home">Home & Kitchen</option>
+            </select>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search Shopping"
+                aria-label="Search products"
+            >
+
+            <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!-- ACCOUNT AND CART -->
+        <div class="nav-right">
+            <a href="account.html" class="nav-item">
+                <small>Hello, sign in</small>
+                <strong>Account & Lists</strong>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <small>Returns</small>
+                <strong>& Orders</strong>
+            </a>
+
+            <a href="cart.html" class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <strong>Cart</strong>
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- LOCATION MODAL -->
+    <div class="location-modal" id="locationModal" hidden>
+        <div class="location-modal-content">
+            <button type="button" id="closeLocation" aria-label="Close">
+                &times;
+            </button>
+
+            <h2>Choose your location</h2>
+            <p>Enter your PIN code to check delivery availability.</p>
+
+            <input
+                type="text"
+                id="pincodeInput"
+                placeholder="Enter PIN code"
+                maxlength="6"
+                inputmode="numeric"
+            >
+
+            <button type="button" id="applyPincode">Apply</button>
+            <p id="locationMessage" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <!-- SECONDARY NAVIGATION -->
+    <nav class="nav-menu" aria-label="Main navigation">
+        <a href="All">☰ All</a>
+        <a href="fresh.html">Fresh</a>
+        <a href="mx player.html">MX Player</a>
+        <a href="sell.html">Sell</a>
+        <a href="bestsellers.html">Bestsellers</a>
+        <a href="Todays deals.html">Today's Deals</a>
+        <a href="Mobiles.html">Mobiles</a>
+        <a href="new releases.html">New Releases</a>
+        <a href="customer service.html">Customer Service</a>
+        <a href="prime.html">Prime</a>
+        <a href="electronics.html">Electronics</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="home&kitchen.html">Home & Kitchen</a>
+        <a href="amazonpay.html">Amazon Pay</a>
+        <a href="books.html">Books</a>
+        <a href="computer.html">Computers</a>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <main>
+        <section class="hero-image-area" aria-label="Featured promotions">
+            <button class="left-arrow" type="button" aria-label="Previous banner">
+                &#10094;
+            </button>
+
+            <button class="right-arrow" type="button" aria-label="Next banner">
+                &#10095;
+            </button>
+        </section>
+
+        <!-- SHOPPING CATEGORIES -->
+        <section class="shopping-sections">
+
+            <div class="shopping-card">
+                <h2>Revamp your home in style</h2>
+
+                <div class="card-grid">
+                    <a href="home&kitchen.html">
+                        <img src="images/cushion.jpg" alt="Cushions">
+                        <span>Cushion covers</span>
+                    </a>
+
+                    <a href="home&kitchen.html">
+                        <img src="images/vases.jpg" alt="Decorative vases">
+                        <span>Vases</span>
+                    </a>
+
+                    <a href="home&kitchen.html">
+                        <img src="images/home.jpg" alt="Home furnishings">
+                        <span>Home furnishings</span>
+                    </a>
+
+                    <a href="home&kitchen.html">
+                        <img src="images/lighting.jpg" alt="Home lighting">
+                        <span>Lighting</span>
+                    </a>
+                </div>
+
+                <a href="home&kitchen.html" class="see-more">Explore all</a>
+            </div>
+
+            <div class="shopping-card">
+                <h2>Appliances for your home | Up to 55% off</h2>
+
+                <div class="card-grid">
+                    <a href="electronics.html">
+                        <img src="images/ac.jpg" alt="Air conditioner">
+                        <span>Air conditioners</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/refrigirator.jpg" alt="Refrigerator">
+                        <span>Refrigerators</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/microwave.jpg" alt="Microwave oven">
+                        <span>Microwaves</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/washing machines.jpg" alt="Washing machine">
+                        <span>Washing machines</span>
+                    </a>
+                </div>
+
+                <a href="images/electronics.html" class="see-more">See more</a>
+            </div>
+
+            <div class="shopping-card">
+                <h2>Starting ₹149 | Headphones</h2>
+
+                <div class="card-grid">
+                    <a href="electronics.html">
+                        <img src="images/boat.jpg" alt="Boat headphones">
+                        <span>Boat</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/boult.jpg" alt="Boult headphones">
+                        <span>Boult</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/noise.jpg" alt="Noise headphones">
+                        <span>Noise</span>
+                    </a>
+
+                    <a href="electronics.html">
+                        <img src="images/zebronics.jpg" alt="Zebronics headphones">
+                        <span>Zebronics</span>
+                    </a>
+                </div>
+
+                <a href="electronics.html" class="see-more">See all offers</a>
+            </div>
+
+            <div class="shopping-card sign-in-card">
+                <h2>Sign in for your best experience</h2>
+                <button type="button" class="sign-in-btn">Sign in securely</button>
+            </div>
+
+        </section>
+
+        <!-- FEATURED PRODUCT -->
+        <section class="featured-product">
+            <a href="pleasure-scooter.html">
+                <img src="images/pleasure.webp" alt="Pleasure scooter">
+            </a>
+        </section>
+
+        <!-- PRODUCT GRID -->
+        <section class="product-section">
+            <h2>Popular products</h2>
+
+            <div class="product-grid">
+                <a href="product.html?item=boatheadphones" class="product-item">
+                    <img src="images/boatheadphones.jpg" alt="Boat headphones">
+                    <span>Boat Headphones</span>
+                </a>
+
+                <a href="product.html?item=amazonbasics" class="product-item">
+                    <img src="images/amazonbasics.jpg" alt="Amazon Basics product">
+                    <span>Amazon Basics</span>
+                </a>
+
+                <a href="product.html?item=goboult" class="product-item">
+                    <img src="images/goboult.jpg" alt="Boult product">
+                    <span>Boult Audio</span>
+                </a>
+
+                <a href="product.html?item=zebronicsneckband" class="product-item">
+                    <img src="images/zebronicsneckband.jpg" alt="Zebronics neckband">
+                    <span>Zebronics Neckband</span>
+                </a>
+
+                <a href="product.html?item=cleaning" class="product-item">
+                    <img src="images/cleaning.jpg" alt="Cleaning products">
+                    <span>Cleaning products</span>
+                </a>
+
+                <a href="product.html?item=tyrecare" class="product-item">
+                    <img src="images/Rim_tyrecare.jpg" alt="Tyre care product">
+                    <span>Tyre care</span>
+                </a>
+
+                <a href="product.html?item=helmets" class="product-item">
+                    <img src="images/helmets.jpg" alt="Helmets">
+                    <span>Helmets</span>
+                </a>
+
+                <a href="product.html?item=vacuum" class="product-item">
+                    <img src="images/Vaccum.jpg" alt="Vacuum cleaner">
+                    <span>Vacuum cleaners</span>
+                </a>
+
+                <a href="product.html?item=diapers" class="product-item">
+                    <img src="images/babydiapers.jpg" alt="Baby diapers">
+                    <span>Baby diapers</span>
+                </a>
+
+                <a href="product.html?item=rideson" class="product-item">
+                    <img src="images/rideson.jpg" alt="Children's ride-on toy">
+                    <span>Ride-on toys</span>
+                </a>
+
+                <a href="product.html?item=rccars" class="product-item">
+                    <img src="images/rc cars.jpg" alt="Remote control cars">
+                    <span>RC cars</span>
+                </a>
+
+                <a href="product.html?item=babyseats" class="product-item">
+                    <img src="images/babyseats.jpg" alt="Baby seats">
+                    <span>Baby seats</span>
+                </a>
+
+                <a href="product.html?item=bedsheets" class="product-item">
+                    <img src="images/bedsheets.jpg" alt="Bedsheets">
+                    <span>Bedsheets</span>
+                </a>
+
+                <a href="product.html?item=curtains" class="product-item">
+                    <img src="images/curtains.jpg" alt="Curtains">
+                    <span>Curtains</span>
+                </a>
+
+                <a href="product.html?item=ironingboard" class="product-item">
+                    <img src="images/ironing board.jpg" alt="Ironing board">
+                    <span>Ironing boards</span>
+                </a>
+
+                <a href="product.html?item=homedecor" class="product-item">
+                    <img src="images/home decor.jpg" alt="Home decor">
+                    <span>Home decor</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="recommendations">
+        <h2>See personalized recommendations</h2>
+        <button type="button" class="sign-in-btn1">Sign in</button>
+        <p>New customer? <a href="account.html">Start here.</a></p>
+    </section>
+
+    <!-- BACK TO TOP -->
+    <a href="#" class="back-to-top">Back to top</a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-columns">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Our Services</a>
+            </div>
+
+            <div>
+                <h3>Connect with Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <a href="sell.html">Sell on our website</a>
+                <a href="#">Advertise your products</a>
+                <a href="#">Affiliate program</a>
+            </div>
+
+            <div>
+                <h3>Let Us Help You</h3>
+                <a href="account.html">Your Account</a>
+                <a href="orders.html">Your Orders</a>
+                <a href="customer service.html">Help</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <a href="index.html">
+                <img src="images/headerlogo.png" alt="Shopping Website Logo">
+            </a>
+
+            <p>English | India</p>
+
+            <p>
+                This is an independent shopping website demo created for learning.
+                It is not affiliated with or endorsed by Amazon.
+            </p>
+
+            <p>© 2026 Shopping Website Demo</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
